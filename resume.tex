@@ -28,9 +28,14 @@
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
+\renewcommand{\headrulewidth}{0pt}% No header rule
+\renewcommand{\footrulewidth}{0pt}% A footer rule
+% \fancyfoot{}
+\fancypagestyle{last-page}{
+  \fancyfoot[C]{Last updated: \today}% Centre footer
+}
+
+\AtEndDocument{\thispagestyle{last-page}}% Page style at \end{document}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -99,26 +104,30 @@
 \begin{document}
 
 %----------HEADING----------
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
-%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
-% \end{tabular*}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{http://github.com/0x61nas}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:career.anas@proton.me}{career.anas@proton.me} \\
+  \href{https://0x61nas.github.io/}{https://0x61nas.github.io} & Mobile : \href{tel:+201018198016}{+201018198016} \\
+\end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape Anas Elgarhy} \\ \vspace{1pt}
-    \href{mailto:career.anas@proton.me}{\underline{career.anas@proton.me}} $|$ 
-    \href{https://linkedin.com/in/anas-elgarhy}{\underline{linkedin.com/in/anas-elgarhy}} $|$
-    \href{https://github.com/0x61nas}{\underline{github.com/0x61nas}}
-\end{center}
+% \begin{center}
+%     \textbf{\Huge \scshape Anas Elgarhy} \\ \vspace{1pt}
+%     \href{mailto:career.anas@proton.me}{\underline{career.anas@proton.me}} $|$
+%     \href{https://linkedin.com/in/anas-elgarhy}{\underline{linkedin.com/in/anas-elgarhy}} $|$
+%     \href{https://github.com/0x61nas}{\underline{github.com/0x61nas}}
+% \end{center}
 
 
 \section{Summary}
-I have been interested in computers and technology since I was originally young. \\ \vspace{4pt}
 
-I am skilled in a variety of programming languages and technologies. I can learn new languages and techniques quickly. \\ \vspace{4pt}
+I have been passionate about computers and technology since a young age. With proficiency in various programming languages and technologies, I have demonstrated the ability to learn and adapt to new languages and techniques quickly. \\ \vspace{4pt}
 
-One of my passions is using my programming skills to create solutions that can positively impact the world. 
-I believe that one line of code has the power to change the world, and I am excited to continue learning and growing as a software engineer and contribute to this.
+My professional experience spans both software engineering and IT industries, where I have successfully applied my skills to develop and implement innovative solutions. I am particularly interested in leveraging my programming expertise to create a positive, real-world impact. I firmly believe that one line of code has the potential to drive significant change. \\ \vspace{4pt}
+
+Additionally, I am deeply committed to the Linux and open-source communities, consistently contributing to and supporting various projects within these ecosystems. My technical expertise includes proficiency in Rust, Python, and Java and experience with frameworks such as Actix, FastAPI, and Spring Boot. I am also adept at using tools like Git, Docker, and Nix, and I have extensive experience with Linux distributions, including Arch Linux and NixOS.  \\ \vspace{4pt}
+
+\begin{center}
+    ``I just love computers``
+\end{center}
 
 
 %-----------EDUCATION-----------
@@ -137,12 +146,19 @@ I believe that one line of code has the power to change the world, and I am exci
 \section{Experience}
    \resumeSubHeadingListStart
 
+    \resumeSubheading
+  {Software Developer}{Nov 2024 -- Present}
+  {Raya Information Technology}{6th of October City, Egypt}
+  \resumeItemListStart
+    \resumeItem{Developing and maintaining the Transaction Middleware for our banking clients}
+    \resumeItem{Collaborated directly with banking clients to deliver prompt support, critical bug fixes, and feature enhancements.}
+  \resumeItemListEnd
+
      \resumeSubheading
-       {Software Engineer}{Apr 2024 -- Present}
+       {Software Engineer}{Apr 2024 -- Nov 2024}
        {Dragons Bootcamp LLC}{Wyoming, United States (Remote)}
        \resumeItemListStart
          \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL, and Docker to analyze GitHub data}
          \resumeItem{Explored ways to improve our learning platform by using state-of-the-art artificial intelligence}
        \resumeItemListEnd
 
@@ -151,7 +167,6 @@ I believe that one line of code has the power to change the world, and I am exci
        {LevelUp ESG™}{City Of London, England, United Kingdom (Remote)}
        \resumeItemListStart
          \resumeItem{Designed the architecture for the PDF generation subsystem, improving document processing efficiency}
-         \resumeItem{Enhanced system security by implementing advanced security protocols and practices}
          \resumeItem{Laid the foundation for performance optimization, resulting in improved system responsiveness}
        \resumeItemListEnd
 
@@ -162,65 +177,30 @@ I believe that one line of code has the power to change the world, and I am exci
          \resumeItem{Assisted in developing the roadmap for Java-based backend programs, aligning with project goals and timelines}
          \resumeItem{Developed a full-stack web application using Spring Boot, React, PostgreSQL, and Docker}
        \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
 
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{aarty} $|$ \emph{Rust, Just}}{October 2022 -- Present}
-          \resumeItemListStart
-            \resumeItem{Mini framework to render images in the terminals/ttys}
-            \resumeItem{\href{https://github.com/0x61nas/aarty}{\underline{github.com/0x61nas/aarty}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/aarty}{\textbf{aarty}} | Mini framework to render images in the terminals/ttys $|$ \emph{Image-rs, Rust, Just}}{October 2022 -- Present} \\
       \resumeProjectHeading
-          {\textbf{lqth} $|$ \emph{Rust, Just, X11}}{December 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{Simple but blazingly fast screenshot utility}
-            \resumeItem{\href{https://github.com/0x61nas/lqth}{\underline{github.com/0x61nas/lqth}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/lqth}{\textbf{lqth}} | Simple but blazingly fast screenshot utility $|$ \emph{Rust, Just, X11}}{December 2023 -- Present}
       \resumeProjectHeading
-          {\textbf{todo2} $|$ \emph{Rust, Just}}{September 2023 -- Present}
-          \resumeItemListStart
-            \resumeItem{More advanced version of Rust's todo! macro}
-            \resumeItem{\href{https://github.com/0x61nas/todo2}{\underline{github.com/0x61nas/todo2}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/todo2}{\textbf{todo2}} | More advanced version of Rust's todo! macro $|$ \emph{Rust, Just}}{September 2023 -- Present}
       \resumeProjectHeading
-          {\textbf{Ayah - IntelliJ IDEA Plugin} $|$ \emph{Java, Gradle, Swing}}{Augusts 2022 -- Present}
-          \resumeItemListStart
-            \resumeItem{a plugin for the IntelliJ IDEA platform that displays verses from the Holy Qur'an to Muslim developers}
-            \resumeItem{\href{https://github.com/0x61nas/Ayah-intellij}{\underline{github.com/0x61nas/Ayah-intellij}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/Ayah-intellij}{\textbf{Ayah}} | plugin that displays verses from the Qur'an to Muslim developers $|$ \emph{Java, Gradle}}{Augusts 2022 -- Present}
       \resumeProjectHeading
-          {\textbf{alquran-cloud-api} $|$ \emph{Java, Maven, Junit, Jackson}}{July 2022 -- Present}
-          \resumeItemListStart
-            \resumeItem{Simple java wrapper library for alquran-clAPI API}
-            \resumeItem{\href{https://github.com/0x61nas/alquran-cloud-api}{\underline{github.com/0x61nas/alquran-cloud-api}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/alquran-cloud-api}{\textbf{jqca}} | Simple java wrapper library for alquran-cloud API $|$ \emph{Java, Maven, Junit, Jackson}}{July 2022 -- Present}
       \resumeProjectHeading
-          {\textbf{jls} $|$ \emph{Java, Maven}}{June 2022 -- January 2023}
-          \resumeItemListStart
-            \resumeItem{Modern alternative to GNU/ls utility}
-            \resumeItem{\href{https://github.com/anas-stuff/jls}{\underline{github.com/anas-stuff/jls}}}
-          \resumeItemListEnd
+          {\href{https://github.com/anas-stuff/jls}{\textbf{jls}} | Modern alternative to GNU/ls utility $|$ \emph{Java, Maven}}{June 2022 -- January 2023}
       \resumeProjectHeading
-          {\textbf{jpwd} $|$ \emph{Java, Maven}}{June 2022 -- July 2023}
-          \resumeItemListStart
-            \resumeItem{Modern alternative to GNU/pwd utility}
-            \resumeItem{\href{https://github.com/0x61nas/jpwd}{\underline{github.com/0x61nas/jpwd}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/jpwd}{\textbf{jpwd}} | Modern alternative to GNU/pwd utility $|$ \emph{Java, Maven}}{June 2022 -- July 2023}
       \resumeProjectHeading
-          {\textbf{JColorfulConsole} $|$ \emph{Java, Maven}}{March 2022 -- September 2023}
-          \resumeItemListStart
-            \resumeItem{A simple library that enables developers to print colored and styled text in the terminal with Java}
-            \resumeItem{\href{https://github.com/0x61nas/JColorfulConsole}{\underline{github.com/0x61nas/JColorfulConsole}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/JColorfulConsole}{\textbf{JColorfulConsole}} | Write a colorful text to the console $|$ \emph{Java, Maven}}{March 2022 -- September 2023}
       \resumeProjectHeading
-          {\textbf{pinterest-login} $|$ \emph{Rust, Just}}{September 2022 -- Present}
-          \resumeItemListStart
-            \resumeItem{More advanced version of Rust's todo! macro}
-            \resumeItem{\href{https://github.com/0x61nas/pinterest-login}{\underline{github.com/0x61nas/pinterest-login}}}
-          \resumeItemListEnd
+          {\href{https://github.com/0x61nas/pinterest-login}{\textbf{pinterest-login}} | Login to Pinterest from rust $|$ \emph{Rust, Just}}{September 2022 -- Present}
     \resumeSubHeadingListEnd
 
 
@@ -241,20 +221,20 @@ I believe that one line of code has the power to change the world, and I am exci
         \resumeItem{\textbf{gpg-tui:} upgrade clap from v3 to v4 \href{https://github.com/orhun/gpg-tui/pull/56}{\underline{\#56}}}
         \resumeItem{And \href{https://github.com/pulls?q=is:pr+author:0x61nas}{\underline{more...}}}
       \resumeItemListEnd
-      
+
     \resumeSubheading
       {Nixpkgs maintainer}{Jun 2024 -- Present}
       {\href{https://github.com/NixOS}{github.com/NixOS}}{Remote}
       \resumeItemListStart
-        \resumeItem{The main maintainer for \emph{flawz} package 
+        \resumeItem{The main maintainer for \emph{flawz} package
             \href{https://github.com/NixOS/nixpkgs/pull/312751}{\underline{\#312751}}}
-        \resumeItem{The main maintainer for \emph{tabiew} package 
+        \resumeItem{The main maintainer for \emph{tabiew} package
             \href{https://github.com/NixOS/nixpkgs/pull/315711}{\underline{\#315711}}}
-        \resumeItem{The main maintainer for \emph{rustmission} package 
+        \resumeItem{The main maintainer for \emph{rustmission} package
             \href{https://github.com/NixOS/nixpkgs/pull/322474}{\underline{\#322474}}}
         \resumeItem{And more
         \href{https://github.com/NixOS/nixpkgs/pulls?q=is\%3Apr+author\%3A0x61nas+is\%3Aclosed}{\underline{PRs}},
-        and  
+        and
         \href{https://github.com/NixOS/nixpkgs/pulls?q=is\%3Apr+is\%3Aclosed+reviewed-by\%3A0x61nas}{\underline{reviews}}.
         }
       \resumeItemListEnd
@@ -266,21 +246,46 @@ I believe that one line of code has the power to change the world, and I am exci
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Rust, Java, Python, C/C++, SQL (Postgres), Bash, HTMX} \\
-     \textbf{Frameworks}{: Actix, Rocket, PyO3, JUnit, FastAPI, Spring, Spring Boot} \\
-     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker, GitHub, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS, PyCharm, IntelliJ} \\
+     \textbf{Languages}{: Rust, C, C++, Java, Python, SQL (Postgres), Bash, Lua, X86Assembly-Intel syntax, Java Script} \\
+     \textbf{Frameworks}{: Actix, Rocket, PyO3, JUnit, FastAPI, Spring Boot, Lombok, Yew, JPA, HTMX, Jackson, Image-rs, Serde, Clap, OpenGL, raylib, SOAP, Jakarta EE} \\
+     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker,
+     GitHub, GitHub Actions, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS,
+     PyCharm, IntelliJ, Cachix, HTML, CSS, GCP, Ubuntu, Debian, SSH, Sqlite, Clang, GCC, NASM, FASM,
+     GnuPG, FFMPEG, farbfeld, Wireshark, JBoss, PlantUML} \\
     }}
  \end{itemize}
+
+\section{Interests}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Low-Level Programming}{: Passionate about working as close to the hardware as possible. Even with high-level abstractions, I always dive into the smallest details to understand how things work. I dislike black-box systems.} \\
+     \textbf{Performance Optimization}{: Dedicated to building high-performance, lightweight software and constantly learning new techniques to maximize efficiency.} \\
+     \textbf{Linux Systems}{: Advanced user of Arch Linux, Gentoo, and NixOS. I enjoy exploring and customizing Linux systems in my free time.} \\
+     \textbf{Programming Languages}{: Fascinated by exploring innovative ways to communicate with computers. I’m continuously refining my vision of the perfect programming language, waiting for the right moment to bring it to life.} \\
+     \textbf{Reverse Engineering}{: Well... nothing is closed-source if you can read assembly ;)}
+    }}
+ \end{itemize}
+
+
+% \section{Interests}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Low-Level Programming}{: I love to work at the lowest level the platform can provide. Even if they provide a high-level abstraction still found myself digging into the smallest details to know how it works. I hate black boxes } \\
+%      \textbf{Open-Source Contribution}{: Active contributor to Linux and Rust ecosystems} \\
+%      \textbf{Performance Optimization}{: Passionate about building high-performance, lightweight software and I'm constantly learning new techniques to squeeze every possible drop of performance} \\
+%      \textbf{Linux Systems}{: Advanced user of Arch Linux, Gentoo, and NixOS. I love tinkering with these stuff in my free time} \\
+%      \textbf{Programming Languages}{: I love exploring new ways to talk to that machine that we call a "Computer" and see how crazy we can go before we start breaking physics roles, and I still have this idea of the perfect programming language evolving in my brain, just waiting for me having enough time and knowledge to make it real}\\
+%     }}
+%  \end{itemize}
 
 
 \section{Languages}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{English}{: Very Good} \\
+     \textbf{English}{: Professional} \\
      \textbf{Arabic}{: Native} \\
     }}
  \end{itemize}
 
 %-------------------------------------------
 \end{document}
-
