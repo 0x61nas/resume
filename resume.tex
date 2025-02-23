@@ -1,0 +1,286 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+\usepackage{CormorantGaramond}
+\usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Anas Elgarhy} \\ \vspace{1pt}
+    \href{mailto:career.anas@proton.me}{\underline{career.anas@proton.me}} $|$ 
+    \href{https://linkedin.com/in/anas-elgarhy}{\underline{linkedin.com/in/anas-elgarhy}} $|$
+    \href{https://github.com/0x61nas}{\underline{github.com/0x61nas}}
+\end{center}
+
+
+\section{Summary}
+I have been interested in computers and technology since I was originally young. \\ \vspace{4pt}
+
+I am skilled in a variety of programming languages and technologies. I can learn new languages and techniques quickly. \\ \vspace{4pt}
+
+One of my passions is using my programming skills to create solutions that can positively impact the world. 
+I believe that one line of code has the power to change the world, and I am excited to continue learning and growing as a software engineer and contribute to this.
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Egyptian E-Learning University}{Dokki, Egypt}
+      {Bachelor of Information Technology}{Jul. 2020 -- Aug. 2024}
+    \resumeSubheading
+      {Beni-Suef University}{Beni-Suef, Egypt}
+      {Bachelor of Computer Science}{Oct. 2020 -- Aug. 2024}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+   \resumeSubHeadingListStart
+
+     \resumeSubheading
+       {Software Engineer}{Apr 2024 -- Present}
+       {Dragons Bootcamp LLC}{Wyoming, United States (Remote)}
+       \resumeItemListStart
+         \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
+         \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL, and Docker to analyze GitHub data}
+         \resumeItem{Explored ways to improve our learning platform by using state-of-the-art artificial intelligence}
+       \resumeItemListEnd
+
+       \resumeSubheading
+       {Software Engineer (Intern)}{Apr 2024 -- Jun 2024}
+       {LevelUp ESG™}{City Of London, England, United Kingdom (Remote)}
+       \resumeItemListStart
+         \resumeItem{Designed the architecture for the PDF generation subsystem, improving document processing efficiency}
+         \resumeItem{Enhanced system security by implementing advanced security protocols and practices}
+         \resumeItem{Laid the foundation for performance optimization, resulting in improved system responsiveness}
+       \resumeItemListEnd
+
+       \resumeSubheading
+       {Software Engineer (Intern)}{May 2023 -- Dec 2023}
+       {Dragons Bootcamp LLC}{Wyoming, United States (Remote)}
+       \resumeItemListStart
+         \resumeItem{Assisted in developing the roadmap for Java-based backend programs, aligning with project goals and timelines}
+         \resumeItem{Developed a full-stack web application using Spring Boot, React, PostgreSQL, and Docker}
+       \resumeItemListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{aarty} $|$ \emph{Rust, Just}}{October 2022 -- Present}
+          \resumeItemListStart
+            \resumeItem{Mini framework to render images in the terminals/ttys}
+            \resumeItem{\href{https://github.com/0x61nas/aarty}{\underline{github.com/0x61nas/aarty}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{lqth} $|$ \emph{Rust, Just, X11}}{December 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{Simple but blazingly fast screenshot utility}
+            \resumeItem{\href{https://github.com/0x61nas/lqth}{\underline{github.com/0x61nas/lqth}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{todo2} $|$ \emph{Rust, Just}}{September 2023 -- Present}
+          \resumeItemListStart
+            \resumeItem{More advanced version of Rust's todo! macro}
+            \resumeItem{\href{https://github.com/0x61nas/todo2}{\underline{github.com/0x61nas/todo2}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Ayah - IntelliJ IDEA Plugin} $|$ \emph{Java, Gradle, Swing}}{Augusts 2022 -- Present}
+          \resumeItemListStart
+            \resumeItem{a plugin for the IntelliJ IDEA platform that displays verses from the Holy Qur'an to Muslim developers}
+            \resumeItem{\href{https://github.com/0x61nas/Ayah-intellij}{\underline{github.com/0x61nas/Ayah-intellij}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{alquran-cloud-api} $|$ \emph{Java, Maven, Junit, Jackson}}{July 2022 -- Present}
+          \resumeItemListStart
+            \resumeItem{Simple java wrapper library for alquran-clAPI API}
+            \resumeItem{\href{https://github.com/0x61nas/alquran-cloud-api}{\underline{github.com/0x61nas/alquran-cloud-api}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{jls} $|$ \emph{Java, Maven}}{June 2022 -- January 2023}
+          \resumeItemListStart
+            \resumeItem{Modern alternative to GNU/ls utility}
+            \resumeItem{\href{https://github.com/anas-stuff/jls}{\underline{github.com/anas-stuff/jls}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{jpwd} $|$ \emph{Java, Maven}}{June 2022 -- July 2023}
+          \resumeItemListStart
+            \resumeItem{Modern alternative to GNU/pwd utility}
+            \resumeItem{\href{https://github.com/0x61nas/jpwd}{\underline{github.com/0x61nas/jpwd}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{JColorfulConsole} $|$ \emph{Java, Maven}}{March 2022 -- September 2023}
+          \resumeItemListStart
+            \resumeItem{A simple library that enables developers to print colored and styled text in the terminal with Java}
+            \resumeItem{\href{https://github.com/0x61nas/JColorfulConsole}{\underline{github.com/0x61nas/JColorfulConsole}}}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{pinterest-login} $|$ \emph{Rust, Just}}{September 2022 -- Present}
+          \resumeItemListStart
+            \resumeItem{More advanced version of Rust's todo! macro}
+            \resumeItem{\href{https://github.com/0x61nas/pinterest-login}{\underline{github.com/0x61nas/pinterest-login}}}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Volunteering}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+       {Open Source Developer}{Jan 2017 -- Present}
+      {\href{https://github.com/0x61nas}{github.com/0x61nas}}{Hybrid}
+      \resumeItemListStart
+        \resumeItem{\textbf{image-rs:} use the built-in methods to convert the bytes between different representations \href{https://github.com/image-rs/image/pull/2071}{\underline{\#2071}}}
+        \resumeItem{\textbf{cargo-bundle:} create a Linux module to improve the code structure \href{https://github.com/burtonageo/cargo-bundle/pull/130}{\underline{\#130}}}
+        \resumeItem{\textbf{ockam:} show interactive menu to select one or more TCP inlent when user doesn't specify \href{https://github.com/build-trust/ockam/pull/6544}{\underline{\#6544}}}
+        \resumeItem{\textbf{ockam:} before sending the req to delete the TCP (outlet, inlet, listener) check that the target exists \href{https://github.com/build-trust/ockam/pull/6453}{\underline{\#6553}}}
+        \resumeItem{\textbf{ockam:} support JSON output in the show subcommand \href{https://github.com/build-trust/ockam/pull/6325}{\underline{\#6325}}}
+        \resumeItem{\textbf{halp:} add the support for custom URLs \href{https://github.com/orhun/halp/pull/58}{\underline{\#58}}}
+        \resumeItem{\textbf{halp:} refactor the config system \href{https://github.com/orhun/halp/pull/62}{\underline{\#62}}}
+        \resumeItem{\textbf{gpg-tui:} upgrade clap from v3 to v4 \href{https://github.com/orhun/gpg-tui/pull/56}{\underline{\#56}}}
+        \resumeItem{And \href{https://github.com/pulls?q=is:pr+author:0x61nas}{\underline{more...}}}
+      \resumeItemListEnd
+      
+    \resumeSubheading
+      {Nixpkgs maintainer}{Jun 2024 -- Present}
+      {\href{https://github.com/NixOS}{github.com/NixOS}}{Remote}
+      \resumeItemListStart
+        \resumeItem{The main maintainer for \emph{flawz} package 
+            \href{https://github.com/NixOS/nixpkgs/pull/312751}{\underline{\#312751}}}
+        \resumeItem{The main maintainer for \emph{tabiew} package 
+            \href{https://github.com/NixOS/nixpkgs/pull/315711}{\underline{\#315711}}}
+        \resumeItem{The main maintainer for \emph{rustmission} package 
+            \href{https://github.com/NixOS/nixpkgs/pull/322474}{\underline{\#322474}}}
+        \resumeItem{And more
+        \href{https://github.com/NixOS/nixpkgs/pulls?q=is\%3Apr+author\%3A0x61nas+is\%3Aclosed}{\underline{PRs}},
+        and  
+        \href{https://github.com/NixOS/nixpkgs/pulls?q=is\%3Apr+is\%3Aclosed+reviewed-by\%3A0x61nas}{\underline{reviews}}.
+        }
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Rust, Java, Python, C/C++, SQL (Postgres), Bash, HTMX} \\
+     \textbf{Frameworks}{: Actix, Rocket, PyO3, JUnit, FastAPI, Spring, Spring Boot} \\
+     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker, GitHub, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS, PyCharm, IntelliJ} \\
+    }}
+ \end{itemize}
+
+
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{English}{: Very Good} \\
+     \textbf{Arabic}{: Native} \\
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
+
