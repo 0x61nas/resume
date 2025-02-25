@@ -2,3 +2,5 @@
 *.log
 *.aux
 *.out
+build/
+dist/
