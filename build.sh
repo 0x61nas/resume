@@ -43,3 +43,5 @@ if [[ ! -d "$DIST_DIR" ]]; then
 fi
 
 cp resume.pdf "$DIST_DIR/anas-resume-$GIT_HASH.pdf"
+
+echo "anas-resume-$GIT_HASH.pdf" >output_path
