@@ -32,10 +32,11 @@
 \renewcommand{\footrulewidth}{0pt}% A footer rule
 % \fancyfoot{}
 \fancypagestyle{last-page}{
-	\fancyfoot[C]{\tiny{Built on @{BUILDING_PLATFORM} from revision
-		\href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{@{GIT_HASH}} on \today{} with @{PDFLATEX_VERSION}.
-		\href{https://0x61nas.github.io/static/docs/anas-resume.pdf.asc}{signature}
-	}
+	\fancyfoot[C]{
+		\tiny{Built on @{BUILDING_PLATFORM} from revision
+			\href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION}.
+			\href{https://0x61nas.github.io/static/docs/anas-resume.pdf.asc}{\underline{signature}}
+		}
 	}
 }
 
