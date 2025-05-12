@@ -33,11 +33,17 @@
 % \fancyfoot{}
 \fancypagestyle{last-page}{
 	\fancyfoot[C]{
-		\tiny{Built on @{BUILDING_PLATFORM} from revision
-			\href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
-			\href{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
-			\href{https://0x61nas.github.io/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
-		}
+		% \tiny{Built on @{BUILDING_PLATFORM} from revision
+		% 	\href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
+		% 	\href{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
+		% 	\href{https://0x61nas.github.io/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
+		% }
+		\makebox[\textwidth][c]{%
+				\tiny{Built on @{BUILDING_PLATFORM} from revision
+				\href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
+				\href{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
+				\href{https://0x61nas.github.io/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}}
+			}
 	}
 }
 
