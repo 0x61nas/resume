@@ -11,7 +11,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+% https://latex.us/macros/latex/contrib/qrcode/qrcode.pdf
 \usepackage{qrcode}
+% https://ctan.net/macros/latex/contrib/textpos/textpos.pdf
 \usepackage[absolute,overlay]{textpos}
 \input{glyphtounicode}
 
@@ -113,11 +115,8 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+\newcommand{\resumeProjectHeading}[3]{
+    \item{\href{#2}{\textbf{\underline{#1}}}: \textit{#3} } \\ \vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -203,23 +202,23 @@ A passionate open-source contributor known for rapidly mastering new technologie
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/aarty}{\textbf{aarty}} | Mini framework to render images in the terminals/ttys $|$ \emph{Image-rs, Rust, Just}}{October 2022 -- Present} \\
+        {Aarty}{https://github.com/0x61nas/aarty}{Mini framework in Rust to render images in the terminals/ttys.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/lqth}{\textbf{lqth}} | Simple but blazingly fast screenshot utility $|$ \emph{Rust, Just, X11}}{December 2023 -- Present}
+        {Lqth}{https://github.com/0x61nas/lqth}{Simple but blazingly fast screenshot utility.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/todo2}{\textbf{todo2}} | More advanced version of Rust's todo! macro $|$ \emph{Rust, Just}}{September 2023 -- Present}
+        {Todo2}{https://github.com/0x61nas/todo2}{The todo comment for serious software engineers.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/Ayah-intellij}{\textbf{Ayah}} | plugin that displays verses from the Qur'an to Muslim developers $|$ \emph{Java, Gradle}}{Augusts 2022 -- Present}
+        {Ayah}{https://github.com/0x61nas/Ayah-intellij}{Plugin for IntelliJ platform that displays verses from the Qur'an to Muslim developers.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/alquran-cloud-api}{\textbf{jqca}} | Simple java wrapper library for alquran-cloud API $|$ \emph{Java, Maven, Junit, Jackson}}{July 2022 -- Present}
+        {Jqca}{https://github.com/0x61nas/alquran-cloud-api}{Simple java wrapper library for alquran-cloud API.}
       \resumeProjectHeading
-          {\href{https://github.com/anas-stuff/jls}{\textbf{jls}} | Modern alternative to GNU/ls utility $|$ \emph{Java, Maven}}{June 2022 -- January 2023}
+        {Jls}{https://github.com/anas-stuff/jls}{Modern alternative to GNU/ls utility.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/jpwd}{\textbf{jpwd}} | Modern alternative to GNU/pwd utility $|$ \emph{Java, Maven}}{June 2022 -- July 2023}
+        {Jpwd}{https://github.com/0x61nas/jpwd}{Modern alternative to GNU/pwd utility.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/JColorfulConsole}{\textbf{JColorfulConsole}} | Write a colorful text to the console $|$ \emph{Java, Maven}}{March 2022 -- September 2023}
+        {JColorfulConsole}{https://github.com/0x61nas/JColorfulConsole}{Write a colorful text to the tty.}
       \resumeProjectHeading
-          {\href{https://github.com/0x61nas/pinterest-login}{\textbf{pinterest-login}} | Login to Pinterest from rust $|$ \emph{Rust, Just}}{September 2022 -- Present}
+        {Pinterest-login}{https://github.com/0x61nas/pinterest-login}{Login to Pinterest from rust code without Using their API.}
     \resumeSubHeadingListEnd
 
 
