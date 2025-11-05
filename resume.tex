@@ -11,6 +11,8 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+\usepackage{qrcode}
+\usepackage[absolute,overlay]{textpos}
 \input{glyphtounicode}
 
 %----------Meatadata-----------
@@ -134,6 +136,11 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \begin{document}
 
 %----------HEADING----------
+
+\begin{textblock*}{3cm}(0.3cm,0.3cm)
+  \quad \qrcode[hyperlink,height=0.8in]{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf}
+\end{textblock*}
+
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %   \textbf{\href{http://github.com/0x61nas}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:career.anas@proton.me}{career.anas@proton.me} \\
 %   \href{https://0x61nas.github.io/}{https://0x61nas.github.io} & Mobile : \href{tel:+201018198016}{+201018198016} \\
