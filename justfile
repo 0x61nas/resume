@@ -8,7 +8,7 @@ _cflags := "-halt-on-error -output-directory=" + OUTDIR
 
 # alias w := whatch
 alias c := compile
-# alias p := preview
+alias p := push
 
 compile:
 	#!/usr/bin/env bash
@@ -42,3 +42,11 @@ compile:
 
 clean:
 	rm -fr *.toc *.snm *.out *.nav *.blg *.log *.bbl *.aux resume.pdf build/
+
+push FLAGS="-u" BRANSH="aurora":
+    git push {{FLAGS}} origin {{BRANSH}} 
+    git push {{FLAGS}} gitlab {{BRANSH}} 
+    git push {{FLAGS}} gitea {{BRANSH}} 
+    git push {{FLAGS}} codeberg {{BRANSH}} 
+    git push {{FLAGS}} disroot {{BRANSH}} 
+    git push {{FLAGS}} tangled {{BRANSH}} 
