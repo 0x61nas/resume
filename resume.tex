@@ -37,6 +37,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \usepackage{CormorantGaramond}
 \usepackage{charter}
 
+\newcommand{\website} {https://thatsillyman.win}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -47,13 +48,13 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
   \fancyfoot[C]{
     % \tiny{Built on @{BUILDING_PLATFORM} from revision
     %   \href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
-    %   \href{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
-    %   \href{https://0x61nas.github.io/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
+    %   \href{https://\website/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
+    %   \href{https://\website/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
     % }
     \makebox[\textwidth][c]{%
         \tiny{Revision \href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
-        \href{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
-        \href{https://0x61nas.github.io/gpg/archive/@{GPG_FINGREPRINT}.gpg}{\underline{GPG}}}
+        \href{\website/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
+        \href{\website/gpg/archive/@{GPG_FINGREPRINT}.gpg}{\underline{GPG}}}
       }
   }
 }
@@ -80,6 +81,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
+
 
 %-------------------------
 % Custom commands
@@ -137,12 +139,12 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 %----------HEADING----------
 
 \begin{textblock*}{3cm}(0.3cm,0.3cm)
-  \quad \qrcode[hyperlink,height=0.8in]{https://0x61nas.github.io/resume/archive/anas-resume-@{GIT_HASH}.pdf}
+  \quad \qrcode[hyperlink,height=0.8in]{\website/resume/archive/anas-resume-@{GIT_HASH}.pdf}
 \end{textblock*}
 
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 %   \textbf{\href{http://github.com/0x61nas}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:career.anas@proton.me}{career.anas@proton.me} \\
-%   \href{https://0x61nas.github.io/}{https://0x61nas.github.io} & Mobile : \href{tel:+201018198016}{+201018198016} \\
+%   \href{https://\website/}{https://\website} & Mobile : \href{tel:+201018198016}{+201018198016} \\
 % \end{tabular*}
 
 \begin{center}
@@ -150,7 +152,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
     \href{mailto:career.anas@proton.me}{\underline{career.anas@proton.me}} $|$
     \href{https://linkedin.com/in/0x61nas}{\underline{linkedin.com/in/0x61nas}} $|$
     \href{https://github.com/0x61nas}{\underline{github.com/0x61nas}} $|$
-    \href{https://0x61nas.github.io}{\underline{0x61nas.github.io}}
+    \href{https://\website}{\underline{\website}}
 \end{center}
 
 
