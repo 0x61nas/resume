@@ -6,6 +6,7 @@ PROOT="$PWD"
 GIT_HASH=$(git rev-parse HEAD)
 GPG_FINGREPRINT="EF4B4CB5DFB8822216A473B1597AB12E66262898"
 GIT_HOST='github\.com\/0x61nas'
+THEME='modern'
 BUILD_DIR="$PROOT/build"
 DIST_DIR="$PROOT/dist"
 source /etc/os-release
@@ -37,6 +38,7 @@ cd $BUILD_DIR || fail
 sed -i "s/@{GIT_HASH}/$GIT_HASH/g" resume.tex || fail
 sed -i "s/@{GPG_FINGREPRINT}/$GPG_FINGREPRINT/g" resume.tex || fail
 sed -i "s/@{GIT_HOST}/$GIT_HOST/g" resume.tex || fail
+sed -i "s/@{THEME}/$THEME/g" resume.tex || fail
 sed -i "s/@{BUILDING_PLATFORM}/$BUILDING_PLATFORM/g" resume.tex || fail
 sed -i "s/@{PDFLATEX_VERSION}/$PDFLATEX_VERSION/g" resume.tex || fail
 

@@ -10,9 +10,34 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
+% https://latex.us/macros/latex/contrib/qrcode/qrcode.pdf
 \usepackage{qrcode}
+% https://ctan.net/macros/latex/contrib/textpos/textpos.pdf
 \usepackage[absolute,overlay]{textpos}
 \input{glyphtounicode}
+
+%----------Theme System-----------
+\def\themeModern{modern}
+\def\themeTerminal{terminal}
+\def\currentTheme{@{THEME}}
+
+% Default Colors (Classic)
+\definecolor{primary}{HTML}{000000}
+\definecolor{accent}{HTML}{000000}
+\definecolor{links}{HTML}{000000}
+
+% Conditional Theme Selection
+\ifx\currentTheme\themeModern
+    \definecolor{primary}{HTML}{000000} % Normal Text
+    \definecolor{accent}{HTML}{191970}  % MidnightBlue
+    \definecolor{links}{HTML}{191970}   % Link Color
+\else
+    \ifx\currentTheme\themeTerminal
+        \definecolor{primary}{HTML}{222222}
+        \definecolor{accent}{HTML}{008F11}  % Matrix Green
+        \definecolor{links}{HTML}{008F11}
+    \fi
+\fi
 
 %----------Constants (Macros)-----------
 \newcommand{\website} {thatsillyman.win}
@@ -28,13 +53,23 @@
   pdfauthor={Anas Elgarhy},
   pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Python},
   colorlinks=true,
-  urlcolor=MidnightBlue,
-  linkcolor=MidnightBlue
+  urlcolor=links,
+  linkcolor=links
 }
 
 %----------FONT OPTIONS----------
-\usepackage[default]{sourcesanspro}
+% sans-serif
+\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+\usepackage{charter}
+
 \usepackage[T1]{fontenc}
+
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -44,7 +79,7 @@
 \fancypagestyle{last-page}{
   \fancyfoot[C]{
     \makebox[\textwidth][c]{%
-        \tiny{Revision \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
+        \tiny\color{primary}{Revision \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
         \href{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
         \href{\websiteurl/gpg/archive/@{GPG_FINGREPRINT}.gpg}{\underline{GPG}}}
       }
@@ -53,12 +88,14 @@
 
 \AtEndDocument{\thispagestyle{last-page}}
 
+
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-0.6in}
-\addtolength{\textheight}{1.2in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+% \setlength{\footskip}{5pt} % Fix for fancyhdr warning
 
 \urlstyle{same}
 
@@ -68,8 +105,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\Large\color{MidnightBlue}
-}{}{0em}{}[\color{MidnightBlue}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\Large\color{accent}
+}{}{0em}{}[\color{accent}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -78,42 +115,42 @@
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-2pt}}
+    \color{primary}{#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{\color{primary}#1} & \color{primary}#2 \\
+      \textit{\small\color{primary}#3} & \textit{\small\color{primary}#4} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubheadingExp}[5]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small{#3}} & \textit{\small{#4}} \\
+      \textbf{\color{primary}#1} & \color{primary}#2 \\
+      \textit{\small\color{primary}#3} & \textit{\small\color{primary}#4} \\
     \end{tabular*}
-    \vspace{-2pt}\hspace{6pt}\textit{\small{#5}}
+    \vspace{-2pt}\hspace{6pt}\textit{\small\color{primary}#5}
     \vspace{-4pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
+      \textit{\small\color{primary}#1} & \textit{\small\color{primary}#2} \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeProjectHeading}[3]{
-    \item{\href{#2}{\textbf{#1}}: \textit{#3} } \\ \vspace{-7pt}
+    \item{\href{#2}{\textbf{\color{primary}#1}}: \textit{\color{primary}#3} } \\ \vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny\color{accent}$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
@@ -124,15 +161,16 @@
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{document}
+\color{primary}
 
 %----------HEADING----------
 \begin{textblock*}{3cm}(0.83cm,0.4cm)
-  \quad \qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}
+  \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
 \end{textblock*}
 
 \begin{center}
-    \textbf{\Huge \scshape \color{MidnightBlue} Anas Elgarhy} \\ \vspace{4pt}
-    \large Systems \& Backend Software Engineer \\ \vspace{6pt}
+    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{4pt}
+    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{6pt}
     \href{mailto:\email}{\email} $|$
     \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
     \href{\githostingurl}{\githosting} $|$
@@ -225,7 +263,7 @@ Active open-source contributor and maintainer with a passion for efficient, tran
         {Maintainer of multiple packages in the official NixOS repository, ensuring build reliability and package updates.}
     \resumeSubheadingExp
         {AUR Package Maintainer}{Jun 2022 -- Present}
-        {\href{https://aur.archlinux.org/packages?SeB=m&K=anelgarhy&O=0&SB=l&SO=d}{aur.archlinux.org}}{Remote}
+        {\href{https://aur.archlinux.org/packages?SeB=m\&K=anelgarhy\&O=0\&SB=l\&SO=d}{aur.archlinux.org}}{Remote}
         {Vendor and maintainer of many packages in Arch user repository.}
   \resumeSubHeadingListEnd
 
