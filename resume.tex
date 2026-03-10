@@ -28,6 +28,8 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \newcommand{\website} {thatsillyman.win}
 \newcommand{\websiteurl} {https://\website}
 \newcommand{\email} {career@\website}
+\newcommand{\githosting} {@{GIT_HOST}}
+\newcommand{\githostingurl} {https://\githosting}
 
 
 %----------FONT OPTIONS----------
@@ -49,12 +51,12 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \fancypagestyle{last-page}{
   \fancyfoot[C]{
     % \tiny{Built on @{BUILDING_PLATFORM} from revision
-    %   \href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
+    %   \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
     %   \href{https://\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
     %   \href{https://\websiteurl/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
     % }
     \makebox[\textwidth][c]{%
-        \tiny{Revision \href{https://github.com/0x61nas/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
+        \tiny{Revision \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
         \href{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
         \href{\websiteurl/gpg/archive/@{GPG_FINGREPRINT}.gpg}{\underline{GPG}}}
       }
@@ -145,7 +147,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \end{textblock*}
 
 % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://github.com/0x61nas}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:\email}{\email} \\
+%   \textbf{\href{http://\githosting}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:\email}{\email} \\
 %   \href{https://\websiteurl/}{https://\websiteurl} & Mobile : \href{tel:+201018198016}{+201018198016} \\
 % \end{tabular*}
 
@@ -153,7 +155,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
     \textbf{\Huge \scshape Anas Elgarhy} \\ \vspace{1pt}
     \href{mailto:\email}{\underline{\email}} $|$
     \href{https://linkedin.com/in/0x61nas}{\underline{linkedin.com/in/0x61nas}} $|$
-    \href{https://github.com/0x61nas}{\underline{github.com/0x61nas}} $|$
+    \href{\githostingurl}{\underline{\githosting}} $|$
     \href{\websiteurl}{\underline{\website}}
 \end{center}
 
@@ -206,25 +208,25 @@ A passionate open-source contributor known for rapidly mastering new technologie
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-        {Akame}{https://github.com/0x61nas/akame}{Simple and reliable backend framework in Rust.}
+        {Akame}{\githostingurl/akame}{Simple and reliable backend framework in Rust.}
       \resumeProjectHeading
-        {Aarty}{https://github.com/0x61nas/aarty}{Mini framework in Rust to render images in the terminals/ttys.}
+        {Aarty}{\githostingurl/aarty}{Mini framework in Rust to render images in the terminals/ttys.}
       \resumeProjectHeading
-        {Lqth}{https://github.com/0x61nas/lqth}{Simple but blazingly fast screenshot utility.}
+        {Lqth}{\githostingurl/lqth}{Simple but blazingly fast screenshot utility.}
       \resumeProjectHeading
-        {Todo2}{https://github.com/0x61nas/todo2}{The todo comment for serious software engineers.}
+        {Todo2}{\githostingurl/todo2}{The todo comment for serious software engineers.}
       \resumeProjectHeading
-        {Ayah}{https://github.com/0x61nas/Ayah-intellij}{Plugin for IntelliJ platform that displays verses from the Qur'an to Muslim developers.}
+        {Ayah}{\githostingurl/Ayah-intellij}{Plugin for IntelliJ platform that displays verses from the Qur'an to Muslim developers.}
       \resumeProjectHeading
-        {Jqca}{https://github.com/0x61nas/alquran-cloud-api}{Simple java wrapper library for alquran-cloud API.}
+        {Jqca}{\githostingurl/alquran-cloud-api}{Simple java wrapper library for alquran-cloud API.}
       \resumeProjectHeading
         {Jls}{https://github.com/anas-stuff/jls}{Modern alternative to GNU/ls utility.}
       \resumeProjectHeading
-        {Jpwd}{https://github.com/0x61nas/jpwd}{Modern alternative to GNU/pwd utility.}
+        {Jpwd}{\githostingurl/jpwd}{Modern alternative to GNU/pwd utility.}
       \resumeProjectHeading
-        {JColorfulConsole}{https://github.com/0x61nas/JColorfulConsole}{Write a colorful text to the tty.}
+        {JColorfulConsole}{\githostingurl/JColorfulConsole}{Write a colorful text to the tty.}
       \resumeProjectHeading
-        {Pinterest-login}{https://github.com/0x61nas/pinterest-login}{Login to Pinterest from rust code without Using their API.}
+        {Pinterest-login}{\githostingurl/pinterest-login}{Login to Pinterest from rust code without Using their API.}
     \resumeSubHeadingListEnd
 
 
@@ -247,7 +249,7 @@ A passionate open-source contributor known for rapidly mastering new technologie
   \resumeSubHeadingListStart
     \resumeSubheadingExp
        {Open Source Developer}{Jan 2017 -- Present}
-      {\href{https://github.com/0x61nas}{github.com/0x61nas}}{Hybrid}
+      {\href{\githostingurl}{\githosting}}{Hybrid}
       {I love use open-source tools and I always make sure that I contribute back whenever I have a chance.}
     \resumeSubheadingExp
       {Nixpkgs maintainer}{Jun 2024 -- Present}
