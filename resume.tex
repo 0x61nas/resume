@@ -1,28 +1,28 @@
 \documentclass[letterpaper,11pt]{article}
-
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-% https://latex.us/macros/latex/contrib/qrcode/qrcode.pdf
 \usepackage{qrcode}
-% https://ctan.net/macros/latex/contrib/textpos/textpos.pdf
 \usepackage[absolute,overlay]{textpos}
 \input{glyphtounicode}
 
-%----------Meatadata-----------
+%----------Metadata-----------
 \hypersetup{
-pdftitle={Anas's Resume},
-pdfsubject={The Resume of Anas Elgarhy Software Engineer. Rev: @{GIT_HASH}},
-pdfauthor={Anas Elgarhy},
-pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Python}
+  pdftitle={Anas's Resume},
+  pdfsubject={The Resume of Anas Elgarhy Software Engineer. Rev: @{GIT_HASH}},
+  pdfauthor={Anas Elgarhy},
+  pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Python},
+  colorlinks=true,
+  urlcolor=MidnightBlue,
+  linkcolor=MidnightBlue
 }
 
 \newcommand{\website} {thatsillyman.win}
@@ -31,30 +31,17 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 \newcommand{\githosting} {@{GIT_HOST}}
 \newcommand{\githostingurl} {https://\githosting}
 
-
 %----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-\usepackage{CormorantGaramond}
-\usepackage{charter}
+\usepackage[default]{sourcesanspro}
+\usepackage[T1]{fontenc}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
 \renewcommand{\headrulewidth}{0pt}% No header rule
 \renewcommand{\footrulewidth}{0pt}% A footer rule
-% \fancyfoot{}
+
 \fancypagestyle{last-page}{
   \fancyfoot[C]{
-    % \tiny{Built on @{BUILDING_PLATFORM} from revision
-    %   \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
-    %   \href{https://\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
-    %   \href{https://\websiteurl/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
-    % }
     \makebox[\textwidth][c]{%
         \tiny{Revision \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
         \href{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
@@ -63,14 +50,14 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
   }
 }
 
-\AtEndDocument{\thispagestyle{last-page}}% Page style at \end{document}
+\AtEndDocument{\thispagestyle{last-page}}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.2in}
 
 \urlstyle{same}
 
@@ -80,12 +67,11 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+  \vspace{-4pt}\scshape\raggedright\Large\color{MidnightBlue}
+}{}{0em}{}[\color{MidnightBlue}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
-
 
 %-------------------------
 % Custom commands
@@ -109,7 +95,6 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
       \textbf{#1} & #2 \\
       \textit{\small{#3}} & \textit{\small{#4}} \\
     \end{tabular*}
-
     \vspace{-2pt}\hspace{6pt}\textit{\small{#5}}
     \vspace{-4pt}
 }
@@ -122,7 +107,7 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 }
 
 \newcommand{\resumeProjectHeading}[3]{
-    \item{\href{#2}{\textbf{\underline{#1}}}: \textit{#3} } \\ \vspace{-7pt}
+    \item{\href{#2}{\textbf{#1}}: \textit{#3} } \\ \vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -137,43 +122,27 @@ pdfkeywords={Software Engineer, Backend Developer, C/C++, Rust, Zig, Java, Pytho
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \begin{document}
 
 %----------HEADING----------
-
 \begin{textblock*}{3cm}(0.83cm,0.4cm)
   \quad \qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}
 \end{textblock*}
 
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{http://\githosting}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:\email}{\email} \\
-%   \href{https://\websiteurl/}{https://\websiteurl} & Mobile : \href{tel:+201018198016}{+201018198016} \\
-% \end{tabular*}
-
 \begin{center}
-    \textbf{\Huge \scshape Anas Elgarhy} \\ \vspace{4pt}
+    \textbf{\Huge \scshape \color{MidnightBlue} Anas Elgarhy} \\ \vspace{4pt}
     \large Systems \& Backend Software Engineer \\ \vspace{6pt}
-    \href{mailto:\email}{\underline{\email}} $|$
-    \href{https://linkedin.com/in/0x61nas}{\underline{linkedin.com/in/0x61nas}} $|$
-    \href{\githostingurl}{\underline{\githosting}} $|$
-    \href{\websiteurl}{\underline{\website}}
+    \href{mailto:\email}{\email} $|$
+    \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
+    \href{\githostingurl}{\githosting} $|$
+    \href{\websiteurl}{\website}
 \end{center}
 
 \section{Summary}
-
 Systems-oriented software engineer specializing in high-performance backend systems and low-level programming. 
 Experienced in building reliable infrastructure using Rust, C/C++, and Java across Linux environments. 
 Strong background in API design, distributed systems, and performance optimization. 
 Active open-source contributor and maintainer with a passion for efficient, transparent software systems.
-
-
-% \section{Summary}
-%
-% A versatile software engineer with deep expertise in systems programming (C, C++, Zig, Rust) and high-level application
-% development (Python, Java, Go). Proficient in modern frameworks including Actix, FastAPI, and Spring Boot,
-% with extensive experience in the Linux ecosystem and a focus on low-level optimization.
-% A passionate open-source contributor known for rapidly mastering new technologies and toolchains to build innovative and efficient solutions.
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -186,31 +155,26 @@ Active open-source contributor and maintainer with a passion for efficient, tran
       {Bachelor of Computer Science}{Oct. 2020 -- Aug. 2024}
   \resumeSubHeadingListEnd
 
-
 %-----------EXPERIENCE-----------
 \section{Experience}
    \resumeSubHeadingListStart
       \resumeSubheadingExp
         {Software Developer}{Nov 2024 -- Present}
         {Raya Information Technology}{6th of October City, Egypt}
-        {Developing and maintaining the Transaction Middleware for our banking clients using Jakarta EE
-        and Collaborated directly with banking clients to deliver prompt support, critical bug fixes, and feature enhancements.}
+        {Developing and maintaining the Transaction Middleware for our banking clients using Jakarta EE and collaborated directly with banking clients to deliver prompt support, critical bug fixes, and feature enhancements.}
       \resumeSubheadingExp
         {Software Engineer}{Apr 2024 -- Nov 2024}
         {Dragons Bootcamp LLC}{Wyoming, United States (Remote)}
-        {Designed and Implement REST APIs using Rust with Actix framework and PostgreSQL to store data from learning management systems}
-
+        {Designed and implemented REST APIs using Rust with Actix framework and PostgreSQL to store data from learning management systems.}
       \resumeSubheadingExp
         {Software Engineer (Intern)}{Apr 2024 -- Jun 2024}
         {LevelUp ESG™}{City Of London, England, United Kingdom (Remote)}
-        {Designed the architecture for the PDF generation subsystem, improving document processing efficiency and laid out the foundation for performance optimization, resulting in improved system responsiveness}
-
+        {Designed the architecture for the PDF generation subsystem, improving document processing efficiency and laid out the foundation for performance optimization, resulting in improved system responsiveness.}
       \resumeSubheadingExp
         {Software Engineer (Intern)}{May 2023 -- Dec 2023}
         {Dragons Bootcamp LLC}{Wyoming, United States (Remote)}
-        {Assisted in developing the roadmap for Java-based backend programs, aligning with project goals and timelines}
+        {Assisted in developing the roadmap for Java-based backend programs, aligning with project goals and timelines.}
   \resumeSubHeadingListEnd
-
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -234,43 +198,35 @@ Active open-source contributor and maintainer with a passion for efficient, tran
       \resumeProjectHeading
         {JColorfulConsole}{\githostingurl/JColorfulConsole}{Write a colorful text to the tty.}
       \resumeProjectHeading
-        {Pinterest-login}{\githostingurl/pinterest-login}{Login to Pinterest from rust code without Using their API.}
+        {Pinterest-login}{\githostingurl/pinterest-login}{Login to Pinterest from rust code without using their API.}
     \resumeSubHeadingListEnd
-
 
 %-----------SKILLS-----------
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Zig, Rust, C, C++, Java, Python, SQL (Postgres), Bash, Lua, Intel assembly, Java Script} \\
+     \textbf{Languages}{: Zig, Rust, C, C++, Java, Python, SQL (Postgres), Bash, Lua, Intel assembly, JavaScript} \\
      \textbf{Frameworks}{: Actix, Rocket, PyO3, JUnit, FastAPI, Spring Boot, Lombok, Yew, JPA, HTMX, Jackson, Image-rs, Serde, Clap, OpenGL, raylib, SOAP, Jakarta EE} \\
-     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker,
-     GitHub, GitHub Actions, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS,
-     PyCharm, IntelliJ, Cachix, HTML, CSS, GCP, Ubuntu, Debian, SSH, Sqlite, Clang, GCC, NASM, FASM,
-     GnuPG, FFMPEG, farbfeld, Wireshark, Recaf,
-     JBoss, PlantUML, LLDB, Minikube, Kubernetes, Jenkins, ArgoCD, Prometheus, Grafana, Nexus} \\
+     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker, GitHub, GitHub Actions, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS, PyCharm, IntelliJ, Cachix, HTML, CSS, GCP, Ubuntu, Debian, SSH, Sqlite, Clang, GCC, NASM, FASM, GnuPG, FFMPEG, farbfeld, Wireshark, Recaf, JBoss, PlantUML, LLDB, Minikube, Kubernetes, Jenkins, ArgoCD, Prometheus, Grafana, Nexus} \\
     }}
  \end{itemize}
 
  %-----------VOLUNTEERING-----------
  \section{Volunteering}
-
-\resumeSubHeadingListStart
+  \resumeSubHeadingListStart
     \resumeSubheadingExp
         {Open Source Developer}{Jan 2017 -- Present}
         {\href{\githostingurl}{\githosting}}{Hybrid}
         {Active contributor to open-source ecosystems with multiple maintained projects and developer tools.}
-
     \resumeSubheadingExp
         {Nixpkgs Maintainer}{Jun 2024 -- Present}
         {\href{https://nixsoftware.org/en/maintainers/0x61nas}{nixsoftware.org}}{Remote}
         {Maintainer of multiple packages in the official NixOS repository, ensuring build reliability and package updates.}
-
     \resumeSubheadingExp
         {AUR Package Maintainer}{Jun 2022 -- Present}
         {\href{https://aur.archlinux.org/packages?SeB=m&K=anelgarhy&O=0&SB=l&SO=d}{aur.archlinux.org}}{Remote}
         {Vendor and maintainer of many packages in Arch user repository.}
-\resumeSubHeadingListEnd
+  \resumeSubHeadingListEnd
 
  %-----------INTERESTS-----------
 \section{Interests}
@@ -284,25 +240,11 @@ Active open-source contributor and maintainer with a passion for efficient, tran
     }}
  \end{itemize}
 
-
-% \section{Interests}
-%  \begin{itemize}[leftmargin=0.15in, label={}]
-%     \small{\item{
-%      \textbf{Low-Level Programming}{: I love to work at the lowest level the platform can provide. Even if they provide a high-level abstraction still found myself digging into the smallest details to know how it works. I hate black boxes } \\
-%      \textbf{Open-Source Contribution}{: Active contributor to Linux and Rust ecosystems} \\
-%      \textbf{Performance Optimization}{: Passionate about building high-performance, lightweight software and I'm constantly learning new techniques to squeeze every possible drop of performance} \\
-%      \textbf{Linux Systems}{: Advanced user of Arch Linux, Gentoo, and NixOS. I love tinkering with these stuff in my free time} \\
-%      \textbf{Programming Languages}{: I love exploring new ways to talk to that machine that we call a "Computer" and see how crazy we can go before we start breaking physics roles, and I still have this idea of the perfect programming language evolving in my brain, just waiting for me having enough time and knowledge to make it real}\\
-%     }}
-%  \end{itemize}
-
-
  %-----------LANGUAGES-----------
 \section{Languages}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{English}{: Professional} \\
-     \textbf{Arabic}{: Native} \\
+     \textbf{English}{: Professional} \quad $|$ \quad \textbf{Arabic}{: Native}
     }}
  \end{itemize}
 
