@@ -96,8 +96,7 @@
   }
 }
 
-\AtEndDocument{\thispagestyle{last-page}}
-
+\AtEndDocument{\thispagestyle{last-page}}% Page style at \end{document}
 
 % Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
@@ -105,7 +104,7 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-% \setlength{\footskip}{5pt} % Fix for fancyhdr warning
+\setlength{\footskip}{5pt} % Fix for fancyhdr warning
 
 \urlstyle{same}
 
@@ -184,12 +183,12 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{1pt}
-    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{1pt}
+    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{2pt}
+    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{2pt}
     \href{mailto:\email}{\email} $|$
     \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
     \href{\githostingurl}{\githosting} $|$
-    \href{\websiteurl}{\website}
+    \href{\websiteurl}{\website} \vspace{-20pt}
 \end{center}
 
 \section{Summary}
