@@ -59,17 +59,20 @@
 
 %----------FONT OPTIONS----------
 % sans-serif
-\usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{FiraSans}
 % \usepackage[sfdefault]{roboto}
 % \usepackage[sfdefault]{noto-sans}
 % \usepackage[default]{sourcesanspro}
+\usepackage[sfdefault]{noto}
+\usepackage[T1]{fontenc}
+\renewcommand*\familydefault{\ttdefault} %% Only if the base font of the document is to be typewriter style
 
 % serif
 % \usepackage{CormorantGaramond}
-\usepackage{charter}
+% \usepackage{charter}
 
-\usepackage[T1]{fontenc}
-
+% TypeWriter
+%\usepackage{DejaVuSansMono}
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
