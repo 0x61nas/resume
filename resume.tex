@@ -83,6 +83,11 @@
 
 \fancypagestyle{last-page}{
   \fancyfoot[C]{
+    % \tiny{Built on @{BUILDING_PLATFORM} from revision
+    %   \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} on \today{} with @{PDFLATEX_VERSION} $|$
+    %   \href{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{signature}} $|$
+    %   \href{\websiteurl/gpg/archive/@{GPG_NUMBER_REV}-@{GPG_EMAIL}.gpg}{\underline{GPG}}
+    % }
     \makebox[\textwidth][c]{%
         \tiny\color{primary}{Revision \href{\githostingurl/resume/tree/@{GIT_HASH}}{\underline{@{GIT_HASH}}} built on @{BUILDING_PLATFORM} at \today{} with @{PDFLATEX_VERSION} $|$
         \href{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf.asc}{\underline{Signature}} $|$
@@ -173,9 +178,14 @@
   \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
 \end{textblock*}
 
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{\githostingurl}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:\email}{\email} \\
+%   \href{\websiteurl/}{https://\websiteurl} & Mobile : \href{tel:+201018198016}{+201018198016} \\
+% \end{tabular*}
+
 \begin{center}
-    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{4pt}
-    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{6pt}
+    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{1pt}
+    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{1pt}
     \href{mailto:\email}{\email} $|$
     \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
     \href{\githostingurl}{\githosting} $|$
@@ -249,9 +259,13 @@ Active open-source contributor and maintainer with a passion for efficient, tran
 \section{Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Zig, Rust, C, C++, Java, Python, SQL (Postgres), Bash, Lua, Intel assembly, JavaScript} \\
+     \textbf{Languages}{: Zig, Rust, C, C++, Java, Python, SQL (Postgres), Bash, Lua, Intel assembly, Java Script} \\
      \textbf{Frameworks}{: Actix, Rocket, PyO3, JUnit, FastAPI, Spring Boot, Lombok, Yew, JPA, HTMX, Jackson, Image-rs, Serde, Clap, OpenGL, raylib, SOAP, Jakarta EE} \\
-     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker, GitHub, GitHub Actions, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS, PyCharm, IntelliJ, Cachix, HTML, CSS, GCP, Ubuntu, Debian, SSH, Sqlite, Clang, GCC, NASM, FASM, GnuPG, FFMPEG, farbfeld, Wireshark, Recaf, JBoss, PlantUML, LLDB, Minikube, Kubernetes, Jenkins, ArgoCD, Prometheus, Grafana, Nexus} \\
+     \textbf{Tools}{: Git, Cargo, Nix, Maven, Postgres, Just, GDB, \LaTeX{}, Make, QEMU, Docker,
+     GitHub, GitHub Actions, GitLab, Vim, Helix, Z-Shell, Neovim, Tmux, Arch Linux, NixOS,
+     PyCharm, IntelliJ, Cachix, HTML, CSS, GCP, Ubuntu, Debian, SSH, Sqlite, Clang, GCC, NASM, FASM,
+     GnuPG, FFMPEG, farbfeld, Wireshark, Recaf,
+     JBoss, PlantUML, LLDB, Minikube, Kubernetes, Jenkins, ArgoCD, Prometheus, Grafana, Nexus} \\
     }}
  \end{itemize}
 
@@ -273,7 +287,7 @@ Active open-source contributor and maintainer with a passion for efficient, tran
   \resumeSubHeadingListEnd
 
  %-----------INTERESTS-----------
-\section{Interests}
+ \section{Interests}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
         \textbf{Embedded Systems}{: Passionate about working as close to the hardware as possible. I dislike black-box systems.} \\
@@ -283,6 +297,17 @@ Active open-source contributor and maintainer with a passion for efficient, tran
         \textbf{Reverse Engineering}{: Well... nothing is closed-source if you can read assembly ;)}
     }}
  \end{itemize}
+
+ % \section{Interests}
+%  \begin{itemize}[leftmargin=0.15in, label={}]
+%     \small{\item{
+%      \textbf{Low-Level Programming}{: I love to work at the lowest level the platform can provide. Even if they provide a high-level abstraction still found myself digging into the smallest details to know how it works. I hate black boxes } \\
+%      \textbf{Open-Source Contribution}{: Active contributor to Linux and Rust ecosystems} \\
+%      \textbf{Performance Optimization}{: Passionate about building high-performance, lightweight software and I'm constantly learning new techniques to squeeze every possible drop of performance} \\
+%      \textbf{Linux Systems}{: Advanced user of Arch Linux, Gentoo, and NixOS. I love tinkering with these stuff in my free time} \\
+%      \textbf{Programming Languages}{: I love exploring new ways to talk to that machine that we call a "Computer" and see how crazy we can go before we start breaking physics roles, and I still have this idea of the perfect programming language evolving in my brain, just waiting for me having enough time and knowledge to make it real}\\
+%     }}
+%  \end{itemize}
 
  %-----------LANGUAGES-----------
 \section{Languages}
