@@ -20,6 +20,7 @@
 \def\themeModern{modern}
 \def\themeTerminal{terminal}
 \def\themeLightErth{lightErth}
+\def\themeLightErthAlt{lightErthAlt}
 \def\currentTheme{@{THEME}}
 
 % Default Colors (Classic)
@@ -42,6 +43,12 @@
             \definecolor{primary}{HTML}{252F1E}
             \definecolor{accent}{HTML}{5F865F} % Teal
             \definecolor{links}{HTML}{B3854D}
+        \else
+            \ifx\currentTheme\themeLightErthAlt
+                \definecolor{primary}{HTML}{252F1E}
+                \definecolor{accent}{HTML}{5F865F} % Teal
+                \definecolor{links}{HTML}{B36B42} % Dark Orange
+            \fi
         \fi
     \fi
 \fi
