@@ -19,8 +19,12 @@
 %----------Theme System-----------
 \def\themeModern{modern}
 \def\themeTerminal{terminal}
+% https://github.com/ptdewey/darkearth-nvim/blob/d63b2a6826ca119c8d44a4222983137d2016efe0/fnl/lightearth/init.fnl
 \def\themeLightErth{lightErth}
 \def\themeLightErthAlt{lightErthAlt}
+% https://github.com/sainnhe/everforest/blob/b03a03148c8b34c24c96960b93da9c8883d11f54/palette.md#light
+\def\themeEverforest{everforest}
+
 \def\currentTheme{@{THEME}}
 
 % Default Colors (Classic)
@@ -48,6 +52,12 @@
                 \definecolor{primary}{HTML}{252F1E}
                 \definecolor{accent}{HTML}{5F865F} % Teal
                 \definecolor{links}{HTML}{B36B42} % Dark Orange
+            \else
+                \ifx\currentTheme\themeEverforest
+                    \definecolor{primary}{HTML}{5C6A72} % fg
+                    \definecolor{accent}{HTML}{35A77C} % aqua
+                    \definecolor{links}{HTML}{3A94C5} % blue
+                \fi
             \fi
         \fi
     \fi
