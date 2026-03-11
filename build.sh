@@ -6,8 +6,8 @@ PROOT="$PWD"
 GIT_HASH=$(git rev-parse HEAD)
 GPG_FINGREPRINT="EF4B4CB5DFB8822216A473B1597AB12E66262898"
 GIT_HOST='github\.com\/0x61nas'
-THEME='everforest'
-HEADER_STYLE='aligned'
+THEME='modern'
+HEADER_STYLE='centric'
 BUILD_DIR="$PROOT/build"
 DIST_DIR="$PROOT/dist"
 source /etc/os-release
