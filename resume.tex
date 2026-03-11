@@ -74,8 +74,15 @@
 \newcommand{\website} {thatsillyman.win}
 \newcommand{\websiteurl} {https://\website}
 \newcommand{\email} {career@\website}
+\newcommand{\myTitle} {Systems \& Backend Software Engineer}
 \newcommand{\githosting} {@{GIT_HOST}}
 \newcommand{\githostingurl} {https://\githosting}
+
+
+%----------Header Style-----------
+\def\headerStyleCentric{centric}
+\def\headerStyleAligned{aligned}
+\def\headerStyle{@{HEADER_STYLE}}
 
 %----------Metadata-----------
 \hypersetup{
@@ -204,23 +211,42 @@
 \color{primary}
 
 %----------HEADING----------
-\begin{textblock*}{3cm}(0.83cm,0.4cm)
-  \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
-\end{textblock*}
 
-% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%   \textbf{\href{\githostingurl}{\Large Anas Elgarhy}} $|$ Software Engineer & Email : \href{mailto:\email}{\email} \\
-%   \href{\websiteurl/}{https://\websiteurl} & Mobile : \href{tel:+201018198016}{+201018198016} \\
-% \end{tabular*}
 
-\begin{center}
-    \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{2pt}
-    \large \color{primary} Systems \& Backend Software Engineer \\ \vspace{2pt}
-    \href{mailto:\email}{\email} $|$
-    \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
-    \href{\githostingurl}{\githosting} $|$
-    \href{\websiteurl}{\website} \vspace{-20pt}
-\end{center}
+\ifx\headerStyle\headerStyleCentric
+    \begin{textblock*}{3cm}(0.83cm,0.4cm)
+      \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
+    \end{textblock*}
+
+    \begin{center}
+        \textbf{\Huge \scshape \color{accent} Anas Elgarhy} \\ \vspace{2pt}
+        \large \color{primary} \myTitle \\ \vspace{2pt}
+        \href{mailto:\email}{\email} $|$
+        \href{https://linkedin.com/in/0x61nas}{linkedin.com/in/0x61nas} $|$
+        \href{\githostingurl}{\githosting} $|$
+        \href{\websiteurl}{\website} \vspace{-20pt}
+    \end{center}
+\else
+    \begin{minipage}{0.75\textwidth}
+        \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+            \textbf{\Large \color{accent} Anas Elgarhy} $|$ \color{primary} \myTitle & Email: \href{mailto:\email}{\email} \\
+            \href{\websiteurl/}{\websiteurl} & Mobile: \href{tel:+201018198016}{+201018198016} \\
+        \end{tabular*}
+    \end{minipage}
+
+    \begin{textblock*}{3cm}(17.5cm,0.4cm)
+        {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
+    \end{textblock*}
+
+    % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    %     \textbf{\Large \color{accent} Anas Elgarhy} $|$ \color{primary} \myTitle & Email : \href{mailto:\email}{\email} \\
+    %   \href{\websiteurl/}{https://\websiteurl} & Mobile : \href{tel:+201018198016}{+201018198016} \\
+    % \end{tabular*}
+    %
+    % \begin{textblock*}{3cm}(0.83cm,0.4cm)
+    %   \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
+    % \end{textblock*}
+\fi
 
 \section{Summary}
 Systems-oriented software engineer specializing in high-performance backend systems and low-level programming. 
