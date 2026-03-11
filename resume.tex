@@ -74,6 +74,7 @@
 \newcommand{\website} {thatsillyman.win}
 \newcommand{\websiteurl} {https://\website}
 \newcommand{\email} {career@\website}
+\newcommand{\myPhoneNumber}{+201018198016}
 \newcommand{\myTitle} {Systems \& Backend Software Engineer}
 \newcommand{\githosting} {@{GIT_HOST}}
 \newcommand{\githostingurl} {https://\githosting}
@@ -211,9 +212,8 @@
 \color{primary}
 
 %----------HEADING----------
-
-
 \ifx\headerStyle\headerStyleCentric
+    % The top qrcode
     \begin{textblock*}{3cm}(0.83cm,0.4cm)
       \quad {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
     \end{textblock*}
@@ -227,16 +227,15 @@
         \href{\websiteurl}{\website} \vspace{-20pt}
     \end{center}
 \else
-    \begin{minipage}{0.75\textwidth}
-        \begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-            \textbf{\Large \color{accent} Anas Elgarhy} $|$ \color{primary} \myTitle & Email: \href{mailto:\email}{\email} \\
-            \href{\websiteurl/}{\websiteurl} & Mobile: \href{tel:+201018198016}{+201018198016} \\
-        \end{tabular*}
-    \end{minipage}
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{\Large \color{accent} Anas Elgarhy} $|$ \color{primary} \myTitle & Email : \href{mailto:\email}{\email} \\
+        \href{\websiteurl/}{\websiteurl} & Mobile : \href{tel:\myPhoneNumber}{\myPhoneNumber} \\
+    \end{tabular*}
 
-    \begin{textblock*}{3cm}(17.5cm,0.4cm)
-        {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
-    \end{textblock*}
+    % % Adjusted (horizontal, vertical) coordinates to move it right
+    % \begin{textblock*}{3cm}(17.5cm,0.4cm)
+    %     {\color{accent}\qrcode[hyperlink,height=0.8in]{\websiteurl/resume/archive/anas-resume-@{GIT_HASH}.pdf}}
+    % \end{textblock*}
 
     % \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     %     \textbf{\Large \color{accent} Anas Elgarhy} $|$ \color{primary} \myTitle & Email : \href{mailto:\email}{\email} \\
