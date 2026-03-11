@@ -24,6 +24,7 @@
 \def\themeLightErthAlt{lightErthAlt}
 % https://github.com/sainnhe/everforest/blob/b03a03148c8b34c24c96960b93da9c8883d11f54/palette.md#light
 \def\themeEverforest{everforest}
+\def\themeEverforestAlt{everforestAlt}
 
 \def\currentTheme{@{THEME}}
 
@@ -32,7 +33,7 @@
 \definecolor{accent}{HTML}{000000}
 \definecolor{links}{HTML}{000000}
 
-% Conditional Theme Selection
+% Theme Selection
 \ifx\currentTheme\themeModern
     \definecolor{primary}{HTML}{000000} % Normal Text
     \definecolor{accent}{HTML}{191970}  % MidnightBlue
@@ -57,6 +58,12 @@
                     \definecolor{primary}{HTML}{5C6A72} % fg
                     \definecolor{accent}{HTML}{35A77C} % aqua
                     \definecolor{links}{HTML}{3A94C5} % blue
+                \else
+                    \ifx\currentTheme\themeEverforestAlt
+                        \definecolor{primary}{HTML}{5C6A72} % fg
+                        \definecolor{accent}{HTML}{93B259} % statusline1
+                        \definecolor{links}{HTML}{35A77C} % aqua
+                    \fi
                 \fi
             \fi
         \fi
