@@ -19,12 +19,12 @@ compile:
     doas chown anas:anas $_OUTPUT_FILE
     doas chmod 644 $_OUTPUT_FILE
     gpg --local-user EF4B4CB5DFB8822216A473B1597AB12E66262898 --detach-sign --armor $_OUTPUT_FILE
-    cp $_OUTPUT_FILE ~/code/me/website/resume/archive/
-    cp $_OUTPUT_FILE.asc ~/code/me/website/resume/archive/
-    ln -srfv ~/code/me/website/resume/archive/$_OUTPUT_FILE_NAME ~/code/me/website/static/docs/anas-resume.pdf
-    ln -srfv ~/code/me/website/resume/archive/$_OUTPUT_FILE_NAME.asc ~/code/me/website/static/docs/anas-resume.pdf.asc
-    ln -srfv ~/code/me/website/resume/archive/$_OUTPUT_FILE_NAME ~/code/me/website/resume/anas-resume.pdf
-    ln -srfv ~/code/me/website/resume/archive/$_OUTPUT_FILE_NAME.asc ~/code/me/website/resume/anas-resume.pdf.asc
+    cp $_OUTPUT_FILE ~/code/website/resume/archive/
+    cp $_OUTPUT_FILE.asc ~/code/website/resume/archive/
+    ln -srfv ~/code/website/resume/archive/$_OUTPUT_FILE_NAME ~/code/website/static/docs/anas-resume.pdf
+    ln -srfv ~/code/website/resume/archive/$_OUTPUT_FILE_NAME.asc ~/code/website/static/docs/anas-resume.pdf.asc
+    ln -srfv ~/code/website/resume/archive/$_OUTPUT_FILE_NAME ~/code/website/resume/anas-resume.pdf
+    ln -srfv ~/code/website/resume/archive/$_OUTPUT_FILE_NAME.asc ~/code/website/resume/anas-resume.pdf.asc
 
 # compile compiler=_compiler cflags=_cflags main=_main:
 # 	{{compiler}} {{cflags}} {{main}}
